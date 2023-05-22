@@ -35,51 +35,17 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Aksi</td>
-                        <td>Genre Aksi adalah genre film yang biasanya sangat menegangkan dan seru pada saat ditonton.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Romantis</td>
-                        <td>Genre Romantis adalah genre film yang menceritakan kisah cinta yang tercipta di antara para tokohnya.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Animasi</td>
-                        <td>Genre Animasi adalah genre film yang merupakan karya tangan/gambar yang bergerak gerak.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Komedi</td>
-                        <td>Genre Komedi adalah genre film yang dimana penekanan utama adalah pada kelucuan.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Horor</td>
-                        <td>Genre Horor adalah genre film yang bercerita tentang rekan yang dimaksud untuk menimbulkan perasaan takut atau ngeri bagi penontonnya.</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
+                    @foreach ($genres as $genre)
+                        <tr>
+                            <td>{{ $genre['no'] }}</td>
+                            <td>{{ $genre['genre'] }}</td>
+                            <td>{{ $genre['deskripsi'] }}</td>
+                            <td>
+                                <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                                <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

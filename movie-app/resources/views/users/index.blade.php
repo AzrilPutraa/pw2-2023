@@ -41,66 +41,20 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Azril Putra Syahri</td>
-                        <td>Azril</td>
-                        <td>azrilputra9</td>
-                        <td>ajielputra09@gmail.com</td>
-                        <td>Media Kreasi</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Faizal Fandi</td>
-                        <td>Ijal</td>
-                        <td>ijaal22</td>
-                        <td>ijalfandi2@gmail.com</td>
-                        <td>Administrator</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Ahmad Yasin</td>
-                        <td>Ahmad</td>
-                        <td>yasin33</td>
-                        <td>ahmadyasin3@gmail.com</td>
-                        <td>User</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Faqih Fauzan</td>
-                        <td>Faqih</td>
-                        <td>faqih44</td>
-                        <td>faqihfauzan4@gmail.com</td>
-                        <td>User</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Abdul Gofar</td>
-                        <td>Gofar</td>
-                        <td>abdul55</td>
-                        <td>abdulgofar5@gmail.com</td>
-                        <td>User</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                        </td>
-                    </tr>
+                    @foreach ($users as $user)
+                        <tr>
+                            <td>{{ $user['no'] }}</td>
+                            <td>{{ $user['nama'] }}</td>
+                            <td>{{ $user['username'] }}</td>
+                            <td>{{ $user['password'] }}</td>
+                            <td>{{ $user['email'] }}</td>
+                            <td>{{ $user['role'] }}</td>
+                            <td>
+                                <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                                <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
